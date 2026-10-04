@@ -14,11 +14,15 @@ Proyecto desarrollado para explorar las tendencias emergentes en inteligencia ar
 - scikit-learn (`KNeighborsClassifier`)
 - GitHub Copilot
 - Visual Studio Code
+- Git y GitHub
 
 ## 📂 Estructura del proyecto
 ```
 AI_Recommendation_System/
 ├── screenshots/
+│   ├── 01-repositorio.png
+│   ├── 02-copilot-codigo.png
+│   └── 03-resultado.png
 ├── generate_data.py
 ├── products.csv
 ├── recommendation_system.py
@@ -31,29 +35,28 @@ AI_Recommendation_System/
 ## 📝 Proceso paso a paso
 
 ### 1. Creación del repositorio
-Creé mi cuenta en GitHub y un repositorio llamado `AI_Recommendation_System` con README, `.gitignore` para Python y licencia MIT.
+Creé mi cuenta de GitHub y un repositorio llamado `AI_Recommendation_System`, inicializado con un archivo README, un `.gitignore` para Python y la licencia MIT.
 
-![Repositorio] ![alt text](<Captura de pantalla 2026-10-03 224218.png>)
+![Repositorio](screenshots/01-repositorio.png)
 
-### 2. Clonado y configuración del entorno
+### 2. Configuración del entorno
 Abrí Visual Studio Code, conecté la carpeta del proyecto con el repositorio de GitHub e instalé las librerías necesarias con:
 ```bash
 python -m pip install numpy pandas scikit-learn
 ```
 
 ### 3. Generación del código con GitHub Copilot
-Creé el archivo `recommendation_system.py` y usé GitHub Copilot para generar el código inicial. El código carga los datos, entrena un modelo KNN, calcula la precisión y define una función `recommend()`.
-[Explica aquí qué le pediste a Copilot y si hiciste cambios al código.]
+Creé el archivo `recommendation_system.py` y usé GitHub Copilot para generar el código inicial. Le pedí un sistema de recomendación de productos con scikit-learn que cargara un archivo `products.csv`, entrenara un modelo `KNeighborsClassifier`, calculara la precisión y tuviera una función `recommend()`. El código resultante carga los datos, separa entrenamiento y prueba (80/20), entrena el modelo con 5 vecinos, evalúa la precisión y recomienda un producto a partir de sus características.
 
-![Código con Copilot] ![alt text](<Captura de pantalla 2026-10-03 222436.png>)
+![Código con Copilot](screenshots/02-copilot-codigo.png)
 
 ### 4. Generación de datos
-El código necesita un archivo `products.csv`, así que creé `generate_data.py`, que genera 100 productos de ejemplo con tres características (`feature1`, `feature2`, `feature3`) y una etiqueta (`label`).
+El código necesita un archivo `products.csv`, así que creé `generate_data.py`, que genera 100 productos de ejemplo con tres características numéricas (`feature1`, `feature2`, `feature3`) y una etiqueta (`label`) que puede ser `Producto_A` o `Producto_B`.
 
 ### 5. Ejecución y resultado
-Ejecuté `python recommendation_system.py`. El modelo obtuvo una precisión de **[X]%** y recomendó **[producto]** para el producto de ejemplo.
+Ejecuté `python recommendation_system.py`. El modelo obtuvo una precisión de **95 %** y recomendó **Producto_B** para el producto de ejemplo `[1.0, 2.0, 3.0]`.
 
-![Resultado] ![alt text](<Captura de pantalla 2026-10-03 222436-1.png>)
+![Resultado](screenshots/03-resultado.png)
 
 ### 6. Commit y push
 Subí los cambios a GitHub con:
@@ -65,7 +68,7 @@ git push -u origin main
 
 ## 🚀 Cómo ejecutarlo
 ```bash
-git clone https://github.com/TU_USUARIO/AI_Recommendation_System.git
+git clone https://github.com/WidjyMarcellus/AI_Recommendation_System.git
 cd AI_Recommendation_System
 pip install -r requirements.txt
 python generate_data.py
@@ -73,7 +76,7 @@ python recommendation_system.py
 ```
 
 ## 💡 Aprendizajes
-[Escribe 2 o 3 líneas: qué te pareció Copilot, en qué te ayudó, qué errores tuviste que resolver y qué aprendiste sobre IA.]
+Con este proyecto aprendí a crear y configurar un repositorio en GitHub, a trabajar con Git desde la terminal de Visual Studio Code y a usar GitHub Copilot para generar código a partir de descripciones en lenguaje natural. También resolví errores reales, como la falta de librerías (`ModuleNotFoundError`) y de un archivo de datos (`FileNotFoundError`). Entendí que Copilot acelera el trabajo, pero es necesario revisar y comprender el código que genera.
 
 ## 👤 Autor
-**[Tu nombre completo]** · [GitHub](https://github.com/TU_USUARIO)
+**[Tu nombre completo]** · [GitHub](https://github.com/WidjyMarcellus)
