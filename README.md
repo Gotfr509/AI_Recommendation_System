@@ -1,2 +1,3 @@
-# AI_Recommendation_System
-"Sistema de recomendación de productos con Python, Scikit-Learn y GitHub Copilot"
+![Repositorio](screenshots/01-repositorio.png)
+![Código con Copilot](screenshots/02-copilot-codigo.png)
+![Resultado](screenshots/03-resultado.png)
